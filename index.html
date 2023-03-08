@@ -11,7 +11,7 @@
     var quoteList = document.getElementById("quote-list");
     var quoteText = quoteInput.value;
     var newQuote = document.createElement("p");
-    newQuote.textContent = '"' + quoteText + '"';
+    newQuote.textContent = '"' + quoteText + '\n\n-Obama"';
     quoteList.innerHTML = ""; // Clear previously entered quotes
     quoteList.appendChild(newQuote);
     quoteInput.value = "";
