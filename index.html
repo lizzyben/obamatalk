@@ -1,0 +1,19 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg" alt="Obama image" width="200" height="200">
+<label for="quote-input">Type what you want the image to say:</label>
+<input type="text" id="quote-input" name="quote-input" placeholder="Type your quote here...">
+<button type="submit" onclick="addQuote()">Enter</button>
+
+<div id="quote-list"></div>
+
+<script>
+  function addQuote() {
+    var quoteInput = document.getElementById("quote-input");
+    var quoteList = document.getElementById("quote-list");
+    var quoteText = quoteInput.value;
+    var newQuote = document.createElement("p");
+    newQuote.textContent = '"' + quoteText + '"';
+    quoteList.innerHTML = ""; // Clear previously entered quotes
+    quoteList.appendChild(newQuote);
+    quoteInput.value = "";
+  }
+</script>
